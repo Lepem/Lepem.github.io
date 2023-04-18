@@ -3,21 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--CSS-->
+    <style>
+        .myli{
+            color:red;
+        }
+    </style>
 </head>
 <body>
 
+<a href="about.html">about</a>
+
+<ul id="t1">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ul>
+<ul>
+    <li>A</li>
+    <li>B</li>
+    <li>c</li>
+
+    <li class="myli">b</li>
+    <li class="myli"><button id="btnC">C</button></li>
+</ul>
 <h2>Greetings</h2>
 <div class="container">
     <div class="inner">Hello</div>
     <div class="inner">Goodbye</div>
 </div>
 
+<!--JS-->
 <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
 
 <script type="text/javascript">
     $(function () {
-        console.log("Hi~ JS!!")
-        $(".inner").append("<p style=\"color:red;\">This is Test</p>");
+        console.log("Hi~ JS!!");
+        //MyBtnClick();
+        $("#btnC").bind("click",MyBtnClick);
+        // #t1 > li:nth-child(1)
+        // #t1 > li
+        $("#t1 > li").addClass("myli");
+
+
+        //#t2 > li:nth-child(1)
+        //#t2 > li
+        $("#t2 > li").removevClass("myli2");
+        //$(".inner").append("<p style=\"color:red;\">This is Test</p>");
     });
 
 </script>
